@@ -30,7 +30,8 @@ class PlatformMap extends StatelessWidget {
     this.onCameraIdle,
     this.onTap,
     this.onLongPress,
-    this.style
+    this.style,
+    this.mapToolbarEnabled = true,
   }) : _platform = PlatformMapsPlatformWidget(
           PlatformMapsPlatformWidgetCreationParams(
             compassEnabled: compassEnabled,
@@ -57,7 +58,8 @@ class PlatformMap extends StatelessWidget {
             trafficEnabled: trafficEnabled,
             zoomControlsEnabled: zoomControlsEnabled,
             zoomGesturesEnabled: zoomGesturesEnabled,
-            style: style
+            style: style,
+            mapToolbarEnabled: mapToolbarEnabled
           ),
         );
 
@@ -204,6 +206,9 @@ class PlatformMap extends StatelessWidget {
   /// The style string can be generated using the
   /// [map style tool](https://mapstyle.withgoogle.com/).
   final String? style;
+
+  /// True if the map should show a toolbar when you interact with the map. Android only.
+  final bool mapToolbarEnabled;
 
   final PlatformMapsPlatformWidget _platform;
 

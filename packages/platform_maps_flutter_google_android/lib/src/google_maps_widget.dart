@@ -170,6 +170,9 @@ class _PlatformMap extends StatefulWidget {
   /// [map style tool](https://mapstyle.withgoogle.com/).
   String? get style => params.style;
 
+  /// True if the map should show a toolbar when you interact with the map. Android only.
+  bool get mapToolbarEnabled => params.mapToolbarEnabled;
+
   @override
   _PlatformMapState createState() => _PlatformMapState();
 }
@@ -205,6 +208,7 @@ class _PlatformMapState extends State<_PlatformMap> {
       minMaxZoomPreference:
           widget.minMaxZoomPreference.googleMapsZoomPreference,
       style: widget.style,
+      mapToolbarEnabled: widget.mapToolbarEnabled,
     );
   }
 
