@@ -35,6 +35,7 @@ class PlatformMapsPlatformWidgetCreationParams {
     this.onCameraIdle,
     this.onTap,
     this.onLongPress,
+    this.style
   });
 
   /// Callback method for when the map is ready to be used.
@@ -167,4 +168,17 @@ class PlatformMapsPlatformWidgetCreationParams {
   /// When this set is empty, the map will only handle pointer events for gestures that
   /// were not claimed by any other gesture recognizer.
   final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers;
+
+  /// The style for the Google map.
+  ///
+  /// Set to null to clear any previous custom styling.
+  ///
+  /// If problems were detected with the [mapStyle], including un-parsable
+  /// styling JSON, unrecognized feature type, unrecognized element type, or
+  /// invalid styler keys, the style is left unchanged, and the error can be
+  /// retrieved with [GoogleMapController.getStyleError].
+  ///
+  /// The style string can be generated using the
+  /// [map style tool](https://mapstyle.withgoogle.com/).
+  final String? style;
 }
