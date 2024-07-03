@@ -32,6 +32,7 @@ class PlatformMap extends StatelessWidget {
     this.onLongPress,
     this.style,
     this.mapToolbarEnabled = true,
+    this.elevationStyle = ElevationStyle.flat
   }) : _platform = PlatformMapsPlatformWidget(
           PlatformMapsPlatformWidgetCreationParams(
             compassEnabled: compassEnabled,
@@ -59,7 +60,8 @@ class PlatformMap extends StatelessWidget {
             zoomControlsEnabled: zoomControlsEnabled,
             zoomGesturesEnabled: zoomGesturesEnabled,
             style: style,
-            mapToolbarEnabled: mapToolbarEnabled
+            mapToolbarEnabled: mapToolbarEnabled,
+            elevationStyle: elevationStyle
           ),
         );
 
@@ -210,6 +212,9 @@ class PlatformMap extends StatelessWidget {
   /// True if the map should show a toolbar when you interact with the map. Android only.
   final bool mapToolbarEnabled;
 
+  final ElevationStyle elevationStyle;
+
+  // One of the MKMapConfiguration.ElevationStyle elevation styles. iOS only.
   final PlatformMapsPlatformWidget _platform;
 
   @override

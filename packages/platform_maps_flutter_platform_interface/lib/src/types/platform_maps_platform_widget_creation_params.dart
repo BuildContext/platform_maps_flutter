@@ -37,6 +37,7 @@ class PlatformMapsPlatformWidgetCreationParams {
     this.onLongPress,
     this.style,
     this.mapToolbarEnabled = true,
+    this.elevationStyle = ElevationStyle.flat
   });
 
   /// Callback method for when the map is ready to be used.
@@ -185,4 +186,6 @@ class PlatformMapsPlatformWidgetCreationParams {
 
   /// True if the map should show a toolbar when you interact with the map. Android only.
   final bool mapToolbarEnabled;
+
+  final ElevationStyle elevationStyle;
 }

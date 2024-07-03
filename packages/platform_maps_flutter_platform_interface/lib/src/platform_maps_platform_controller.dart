@@ -9,4 +9,6 @@ abstract class PlatformMapsPlatformController {
   Future<void> moveCamera(CameraUpdate cameraUpdate);
   Future<LatLngBounds> getVisibleRegion();
   Future<Uint8List?> takeSnapshot();
+  Future<void> lookAround(LatLng latLng);
+  Future<bool> isLookAroundAvailable(LatLng latLng);
 }

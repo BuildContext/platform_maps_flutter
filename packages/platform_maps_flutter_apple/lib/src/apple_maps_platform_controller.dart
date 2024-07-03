@@ -59,4 +59,18 @@ class AppleMapsPlatformController extends PlatformMapsPlatformController {
   Future<Uint8List?> takeSnapshot() {
     return _appleMapController.takeSnapshot();
   }
+
+  @override
+  Future<void> lookAround(LatLng latLng) async {
+    return _appleMapController
+        .lookAround(apple_maps.LatLng(latLng.latitude, latLng.longitude));
+  }
+
+  @override
+  Future<bool> isLookAroundAvailable(LatLng latLng) async {
+    return (await _appleMapController.isLookAroundAvailable(
+          apple_maps.LatLng(latLng.latitude, latLng.longitude),
+        )) ??
+        false;
+  }
 }
