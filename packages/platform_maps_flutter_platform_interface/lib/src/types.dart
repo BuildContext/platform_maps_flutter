@@ -16,3 +16,4 @@ export 'types/pattern_item.dart';
 export 'types/polygon.dart';
 export 'types/polyline.dart';
 export 'types/elevation_style.dart';
+export 'types/point_of_interest_category.dart';
