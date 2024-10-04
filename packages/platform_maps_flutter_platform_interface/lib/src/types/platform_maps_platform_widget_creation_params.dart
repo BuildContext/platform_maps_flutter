@@ -37,7 +37,7 @@ class PlatformMapsPlatformWidgetCreationParams {
     this.onLongPress,
     this.style,
     this.mapToolbarEnabled = true,
-    this.elevationStyle = ElevationStyle.flat
+    this.elevationStyle = ElevationStyle.flat,
   });
 
   /// Callback method for when the map is ready to be used.

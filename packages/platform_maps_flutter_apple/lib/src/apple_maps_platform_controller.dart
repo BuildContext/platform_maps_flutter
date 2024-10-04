@@ -63,7 +63,7 @@ class AppleMapsPlatformController extends PlatformMapsPlatformController {
 
   @override
   Future<void> lookAround(
-      LatLng latLng, List<PointOfInterestCategory> poiFilter) async {
+      LatLng latLng, List<PointOfInterestCategory> poiFilter,) async {
     return _appleMapController.lookAround(
         apple_maps.LatLng(latLng.latitude, latLng.longitude),
         poiFilter

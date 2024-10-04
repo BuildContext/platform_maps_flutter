@@ -32,7 +32,7 @@ class PlatformMap extends StatelessWidget {
     this.onLongPress,
     this.style,
     this.mapToolbarEnabled = true,
-    this.elevationStyle = ElevationStyle.flat
+    this.elevationStyle = ElevationStyle.flat,
   }) : _platform = PlatformMapsPlatformWidget(
           PlatformMapsPlatformWidgetCreationParams(
             compassEnabled: compassEnabled,
@@ -61,7 +61,7 @@ class PlatformMap extends StatelessWidget {
             zoomGesturesEnabled: zoomGesturesEnabled,
             style: style,
             mapToolbarEnabled: mapToolbarEnabled,
-            elevationStyle: elevationStyle
+            elevationStyle: elevationStyle,
           ),
         );
 
